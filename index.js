@@ -29,9 +29,10 @@ conectarDb();
 //console.log( process.env.FRONTEND_URL)
 
 const opcionesCors ={
-
-    origin : process.env.FRONTEND_URL // ACEPTANDO PETICIONES SOLAMENTE DE LOCALHOST 3000 QUE ES DEL FRONTEND 
-
+    origin:'https://nodesend-cliente-wilfredo31205.vercel.app', 
+    //origin : process.env.FRONTEND_URL, // ACEPTANDO PETICIONES SOLAMENTE DE LOCALHOST 3000 QUE ES DEL FRONTEND 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
 }
 
 app.use(cors(opcionesCors));
